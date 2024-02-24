@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ Sets up the flask application with configurations """
 from api.v1.views import app_views
-from flask import Flask, Blueprint
+from flask import Flask
 from models import storage
 import os
-from .views import app_views
 
 app = Flask(__name__)
 
