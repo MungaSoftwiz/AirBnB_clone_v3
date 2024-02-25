@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """ Initializes a Blueprint object """
 from flask import Blueprint
