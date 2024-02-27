@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Sets up the flask application with configurations """
+"""Sets up the flask application with configurations
+"""
 from api.v1.views import app_views
 from flask import Flask, make_response, jsonify
 from flask_cors import CORS
