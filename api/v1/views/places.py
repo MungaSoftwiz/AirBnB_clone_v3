@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Module handles all default RESTFul API actions
 """
+from api.v1.views import app_views
 from flask import make_response, jsonify, request, abort
 from models import storage
-from api.v1.views import app_views
 
 
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
