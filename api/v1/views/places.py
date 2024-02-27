@@ -3,7 +3,7 @@
 """
 from flask import make_response, jsonify, request, abort
 from models import storage
-from models import storage
+from api.v1.views import app_views
 
 
 @app_views.route('/cities/<city_id>/places', methods=['GET'],
