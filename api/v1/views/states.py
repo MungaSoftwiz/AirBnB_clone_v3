@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defines URI routes for State objects."""
-from api.v1.views import app_views
 from flask import jsonify, make_response, request, abort
+from api.v1.views import app_views
 from models import storage
 from models.state import State
 
@@ -46,10 +46,10 @@ def delete_state(state_id):
 def post_state():
     """Creates a State"""
     if not request.get_json():
-        abort(400, description="Not a JSON")
+        abort(400, "Not a JSON")
 
     if 'name' not in request.get_json():
-        abort(400, description="Missing name")
+        abort(400, "Missing name")
 
     data = request.get_json()
     instance = State(**data)
@@ -66,7 +66,7 @@ def put_state(state_id):
         abort(404)
 
     if not request.get_json():
-        abort(400, description="Not a JSON")
+        abort(400, "Not a JSON")
 
     ignore = ['id', 'created_at', 'updated_at']
 
