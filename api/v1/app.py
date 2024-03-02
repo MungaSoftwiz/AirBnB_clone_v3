@@ -20,7 +20,7 @@ def teardown(ctx):
 
 @app.errorhandler(404)
 def not_found(error):
-    """Handler for 404 errors """
+    """ Handler for 404 errors """
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
